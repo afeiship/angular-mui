@@ -15,7 +15,10 @@ npm install -S @jswork/next-local-keep-files
 ```js
 import '@jswork/next-local-keep-files';
 
-//DOCS here!
+nx.localKeepFiles({
+  keep: 5, 
+  files: globby.sync('__tests__/files/*.txt')
+});
 ```
 
 ## license
