@@ -6,9 +6,7 @@
 
   nx.localKeepFiles = function (inOptions) {
     var options = nx.mix(null, defaults, inOptions);
-    var files = options.files;
-    var keep = options.keep;
-    var by = options.by;
+    var { files, keep, by } = options;
     if (files.length > keep) {
       var sorted = files.sort(function (a, b) {
         var stat1 = fs.statSync(a);
